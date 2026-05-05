@@ -2,7 +2,7 @@ from django.urls import path
 from .views import (index, dashboard, register, user_login, user_logout, create_category, delete_category, update_record, 
                     create_expense, delete_expense, create_income, delete_income)
 
-urls = [
+urlpatterns = [
     path('', index, name='index'),
     path('dashboard/', dashboard, name='dashboard'),
     path('dashboard/update/<slug:record_type>/<int:record_id>/', update_record, name='update_record'),
