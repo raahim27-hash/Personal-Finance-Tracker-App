@@ -1,0 +1,6 @@
+django
+django-pwa
+django-crispy-forms
+crispy-bootstrap5
+mysqlclient
+Pillow
