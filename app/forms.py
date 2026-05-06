@@ -33,7 +33,7 @@ class CategoryForm(forms.ModelForm):
         fields = ['name', 'type']
 
 
-class UpdateForm(forms.ModelForm):
+class UpdateForm(forms.Form):
     amount = forms.DecimalField(max_digits=10, decimal_places=2, required=True)
     category = forms.ModelChoiceField(label="Category", required=True, queryset=Category.objects.all())
     description = forms.CharField(widget=forms.Textarea, required=True, label="Description")
