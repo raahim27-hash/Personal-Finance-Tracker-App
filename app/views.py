@@ -94,8 +94,7 @@ def dashboard(request):
     expense_data = [-float(y) if y > 0 else float(y) for y in expense_monthly_data.values()]
 
     combined_data = list(chain(income_data, expense_data))
-
-    sorted_combined_data = sorted(combined_data, key=lambda x: x.created_at)
+    sorted_combined_data = combined_data
 
     categories = Category.objects.filter(user=request.user)
 
